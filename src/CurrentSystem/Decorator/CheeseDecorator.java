@@ -1,4 +1,9 @@
-class CheeseDecorator extends BurgerDecorator {
+package CurrentSystem.Decorator;
+
+import CurrentSystem.Burger;
+import CurrentSystem.Decorator.BurgerDecorator;
+
+public class CheeseDecorator extends BurgerDecorator {
     public CheeseDecorator(Burger burger) {
         super(burger);
     }

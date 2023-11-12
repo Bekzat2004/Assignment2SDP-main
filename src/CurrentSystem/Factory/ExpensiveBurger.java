@@ -1,3 +1,7 @@
+package CurrentSystem.Factory;
+
+import CurrentSystem.Burger;
+
 class ExpensiveBurger implements Burger {
     @Override
     public String getDescription() {

@@ -1,4 +1,6 @@
-class BasicBurger implements Burger {
+package CurrentSystem;
+
+public class BasicBurger implements Burger {
     @Override
     public String getDescription() {
         return "Base for Classic burger";

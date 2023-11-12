@@ -1,19 +1,30 @@
+import CurrentSystem.*;
+import CurrentSystem.Adapter.*;
+import CurrentSystem.Decorator.*;
+import CurrentSystem.Factory.*;
+import OldSystem.*;
 import java.util.Scanner;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Burger myBurger = new BasicBurger();
         System.out.println("Welcome to FastBurger restaurant!");
         System.out.println("Do you want to create custom burger (type 1) or buy surprise combo (type 2)? ");
         int choice = scanner.nextInt();
         if (choice == 1){
             System.out.println("Welcome to burger builder tool!");
             System.out.println("Do you want to start? (1 for yes, 0 for no)");
-            Burger myBurger = new BasicOldBurgerAdapter(new BasicOldBurger());
             int startChoice = scanner.nextInt();
             if (startChoice == 1) {
-                System.out.println("Excellent!");
+                System.out.println("Excellent! Which of these burgers do you want? (1 for Black Burger, 2 for Classic Burger)");
+                int burgerChoice = scanner.nextInt();
+                if(burgerChoice == 1){
+                    myBurger = new BasicOldBurgerAdapter(new BasicOldBurger());
+                }
+                else if(burgerChoice == 2){
+                    myBurger = new BasicBurger();
+                }
                 System.out.println("Do you want to add extra cutlet? (1 for yes, any other respond for no)");
                 int cutletChoice = scanner.nextInt();
                 if (cutletChoice == 1) {

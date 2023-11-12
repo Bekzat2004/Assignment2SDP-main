@@ -1,3 +1,0 @@
-interface BurgerFactory {
-    Burger createBurger();
-}

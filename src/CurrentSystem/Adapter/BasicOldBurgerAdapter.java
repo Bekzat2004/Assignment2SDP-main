@@ -1,5 +1,10 @@
-class BasicOldBurgerAdapter implements Burger {
-    private oldBurger oldBurger;
+package CurrentSystem.Adapter;
+
+import CurrentSystem.Burger;
+import OldSystem.*;
+
+public class BasicOldBurgerAdapter implements Burger {
+    private OldSystem.oldBurger oldBurger;
     public BasicOldBurgerAdapter(oldBurger oldBurger){
         this.oldBurger = oldBurger;
     }

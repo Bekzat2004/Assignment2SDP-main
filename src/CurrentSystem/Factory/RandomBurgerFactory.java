@@ -1,6 +1,10 @@
+package CurrentSystem.Factory;
+
+import CurrentSystem.Burger;
+
 import java.util.Random;
 
-class RandomBurgerFactory implements BurgerFactory {
+public class RandomBurgerFactory implements BurgerFactory {
     @Override
     public Burger createBurger() {
         Random random = new Random();

@@ -1,3 +1,7 @@
+package CurrentSystem.Factory;
+
+import CurrentSystem.Burger;
+
 class MediumBurger implements Burger {
     @Override
     public String getDescription() {
