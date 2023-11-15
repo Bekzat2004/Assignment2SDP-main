@@ -6,12 +6,14 @@ import CurrentSystem.Decorator.CheeseDecorator;
 import CurrentSystem.Decorator.CutletDecorator;
 import CurrentSystem.Decorator.SaladDecorator;
 import CurrentSystem.Decorator.TomatoDecorator;
+import CurrentSystem.Singleton.Database;
 import OldSystem.BasicOldBurger;
 
 import java.util.Scanner;
 
 public class BurgerBuildingStrategy implements Strategy{
     public void doSomething(Scanner scanner, Burger myBurger){
+        Database database = Database.getInstance();
         System.out.println("Welcome to burger builder tool!");
         System.out.println("Do you want to start? (1 for yes, 0 for no)");
         int startChoice = scanner.nextInt();
@@ -47,6 +49,7 @@ public class BurgerBuildingStrategy implements Strategy{
         }
         System.out.println("Burger Description: " + myBurger.getDescription());
         System.out.println("Total Cost: " + myBurger.getCost() + " tenge");
+        database.setData("Burger Description: " + myBurger.getDescription());
     }
 
 }
