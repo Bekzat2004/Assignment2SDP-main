@@ -1,4 +1,5 @@
-package CurrentSystem;
+package CurrentSystem.Strategy;
+import CurrentSystem.Burger;
 import CurrentSystem.Factory.BurgerFactory;
 import CurrentSystem.Factory.ComboBurgerFactory;
 import CurrentSystem.Factory.RandomBurgerFactory;

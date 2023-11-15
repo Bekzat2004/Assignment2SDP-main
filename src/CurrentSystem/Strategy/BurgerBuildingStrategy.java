@@ -1,5 +1,7 @@
-package CurrentSystem;
+package CurrentSystem.Strategy;
 import CurrentSystem.Adapter.BasicOldBurgerAdapter;
+import CurrentSystem.BasicBurger;
+import CurrentSystem.Burger;
 import CurrentSystem.Decorator.CheeseDecorator;
 import CurrentSystem.Decorator.CutletDecorator;
 import CurrentSystem.Decorator.SaladDecorator;

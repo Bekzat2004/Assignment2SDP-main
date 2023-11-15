@@ -1,8 +1,9 @@
 import CurrentSystem.*;
-import CurrentSystem.Adapter.*;
-import CurrentSystem.Decorator.*;
-import CurrentSystem.Factory.*;
-import OldSystem.*;
+import CurrentSystem.Strategy.BurgerBuildingStrategy;
+import CurrentSystem.Strategy.RandomComboStrategy;
+import CurrentSystem.Strategy.Strategy;
+import CurrentSystem.Strategy.StrategyContext;
+
 import java.util.Scanner;
 
 public class Main {

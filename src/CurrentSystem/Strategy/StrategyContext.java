@@ -1,4 +1,6 @@
-package CurrentSystem;
+package CurrentSystem.Strategy;
+import CurrentSystem.Burger;
+
 import java.util.Scanner;
 
 public class StrategyContext {
