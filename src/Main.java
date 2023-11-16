@@ -10,15 +10,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Database database = Database.getInstance();
-
         Client client1 = new Client("Administrator");
         Client client2 = new Client("Cook");
         database.registerObserver(client1);
         database.registerObserver(client2);
-
-
-        database.setData("Basis for Classic burger");
-        database.closeConnection();
         Scanner scanner = new Scanner(System.in);
         Burger myBurger = new BasicBurger();
         Strategy burgerBuilding = new BurgerBuildingStrategy();
@@ -34,6 +29,7 @@ public class Main {
             context.setStrategy(randomCombo);
             context.performStrategy(scanner, myBurger);
         }
+        database.closeConnection();
     }
 }
 

@@ -1,4 +1,5 @@
 package CurrentSystem.Strategy;
+
 import CurrentSystem.Adapter.BasicOldBurgerAdapter;
 import CurrentSystem.BasicBurger;
 import CurrentSystem.Burger;
@@ -11,8 +12,8 @@ import OldSystem.BasicOldBurger;
 
 import java.util.Scanner;
 
-public class BurgerBuildingStrategy implements Strategy{
-    public void doSomething(Scanner scanner, Burger myBurger){
+public class BurgerBuildingStrategy implements Strategy {
+    public void doSomething(Scanner scanner, Burger myBurger) {
         Database database = Database.getInstance();
         System.out.println("Welcome to burger builder tool!");
         System.out.println("Do you want to start? (1 for yes, 0 for no)");
@@ -20,10 +21,9 @@ public class BurgerBuildingStrategy implements Strategy{
         if (startChoice == 1) {
             System.out.println("Excellent! Which of these burgers do you want? (1 for Black Burger, 2 for Classic Burger)");
             int burgerChoice = scanner.nextInt();
-            if(burgerChoice == 1){
+            if (burgerChoice == 1) {
                 myBurger = new BasicOldBurgerAdapter(new BasicOldBurger());
-            }
-            else if(burgerChoice == 2){
+            } else if (burgerChoice == 2) {
                 myBurger = new BasicBurger();
             }
             System.out.println("Do you want to add extra cutlet? (1 for yes, any other respond for no)");

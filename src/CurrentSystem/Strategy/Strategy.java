@@ -1,4 +1,5 @@
 package CurrentSystem.Strategy;
+
 import CurrentSystem.Burger;
 
 import java.util.Scanner;
